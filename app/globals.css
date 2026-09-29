@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-cream: #F8F4EC;
+    --ink: #141414;
+    --mustard: #EDB13E;
+    --google-blue: #4C80F0;
+    --google-red: #D9503F;
+    --google-green: #4FA35A;
+    --lavender: #EFF2FB;
+    --editor-bg: #171717;
+  }
+
+  body {
+    background-color: var(--bg-cream);
+    color: var(--ink);
+  }
+}
+
+.neo-shadow-xs {
+  box-shadow: 2px 2px 0px #141414;
+}
+
+.neo-shadow-sm {
+  box-shadow: 3px 3px 0px #141414;
+}
+
+.neo-shadow-md {
+  box-shadow: 4px 4px 0px #141414;
+}
+
+.neo-shadow-lg {
+  box-shadow: 6px 6px 0px #141414;
+}
+
+.neo-stamp {
+  transform: rotate(-3deg);
+  box-shadow: 3px 3px 0px #141414;
+}
+
+.grid-bg-pattern {
+  background-image: radial-gradient(#141414 1.1px, transparent 1.1px);
+  background-size: 24px 24px;
+}
+
+/* Custom drafting scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F4EC;
+  border-left: 1px solid #141414;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #141414;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #EDB13E;
+}
