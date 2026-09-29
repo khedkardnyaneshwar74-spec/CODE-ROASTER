@@ -67,6 +67,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(result, { status: 200 });
   } catch (error: any) {
     console.error("Error analyzing code in /api/roast:", error);
+    if (error?.cause) console.error("Error cause:", error.cause);
     return NextResponse.json(
       { error: error?.message || "Failed to analyze code." },
       { status: 500 }

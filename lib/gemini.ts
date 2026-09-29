@@ -25,6 +25,7 @@ function friendlyErrorMessage(status: number | undefined, error: any): string {
 
 export async function analyzeCode(request: RoastRequest): Promise<RoastResult> {
   const apiKey = process.env.GEMINI_API_KEY;
+  console.log("Analyzing code, GEMINI_API_KEY prefix:", apiKey ? apiKey.slice(0, 8) + "..." : "MISSING");
   if (!apiKey) {
     throw new Error(
       "GEMINI_API_KEY is missing. Copy .env.example to .env.local, add your key, and restart the server."
